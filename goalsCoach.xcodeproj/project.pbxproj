@@ -19,6 +19,8 @@
 		5686B0141CD7B0FF00FF8B77 /* sunrise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0091CD7B0FF00FF8B77 /* sunrise.jpg */; };
 		5686B0151CD7B0FF00FF8B77 /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B00A1CD7B0FF00FF8B77 /* sunset.jpg */; };
 		5686B01B1CD7B92800FF8B77 /* GoalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5686B01A1CD7B92800FF8B77 /* GoalsTableViewController.m */; };
+		5686B01E1CD7C98A00FF8B77 /* Goals.m in Sources */ = {isa = PBXBuildFile; fileRef = 5686B01D1CD7C98A00FF8B77 /* Goals.m */; };
+		5686B0211CD7CB8200FF8B77 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5686B0201CD7CB8200FF8B77 /* DataSource.m */; };
 		56DFC45C1CD406F9005B36B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DFC45B1CD406F9005B36B8 /* main.m */; };
 		56DFC45F1CD406F9005B36B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DFC45E1CD406F9005B36B8 /* AppDelegate.m */; };
 		56DFC4681CD406FA005B36B8 /* goalsCoach.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56DFC4661CD406FA005B36B8 /* goalsCoach.xcdatamodeld */; };
@@ -59,6 +61,10 @@
 		5686B00A1CD7B0FF00FF8B77 /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
 		5686B0191CD7B92800FF8B77 /* GoalsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsTableViewController.h; sourceTree = "<group>"; };
 		5686B01A1CD7B92800FF8B77 /* GoalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsTableViewController.m; sourceTree = "<group>"; };
+		5686B01C1CD7C98A00FF8B77 /* Goals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goals.h; sourceTree = "<group>"; };
+		5686B01D1CD7C98A00FF8B77 /* Goals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goals.m; sourceTree = "<group>"; };
+		5686B01F1CD7CB8200FF8B77 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		5686B0201CD7CB8200FF8B77 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		56DFC4571CD406F9005B36B8 /* goalsCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goalsCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56DFC45B1CD406F9005B36B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56DFC45D1CD406F9005B36B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 				56DFC45A1CD406F9005B36B8 /* Supporting Files */,
 				5686B0191CD7B92800FF8B77 /* GoalsTableViewController.h */,
 				5686B01A1CD7B92800FF8B77 /* GoalsTableViewController.m */,
+				5686B01C1CD7C98A00FF8B77 /* Goals.h */,
+				5686B01F1CD7CB8200FF8B77 /* DataSource.h */,
+				5686B0201CD7CB8200FF8B77 /* DataSource.m */,
+				5686B01D1CD7C98A00FF8B77 /* Goals.m */,
 			);
 			path = goalsCoach;
 			sourceTree = "<group>";
@@ -323,6 +333,8 @@
 			files = (
 				56DFC45F1CD406F9005B36B8 /* AppDelegate.m in Sources */,
 				56DFC45C1CD406F9005B36B8 /* main.m in Sources */,
+				5686B0211CD7CB8200FF8B77 /* DataSource.m in Sources */,
+				5686B01E1CD7C98A00FF8B77 /* Goals.m in Sources */,
 				5686B01B1CD7B92800FF8B77 /* GoalsTableViewController.m in Sources */,
 				56DFC4681CD406FA005B36B8 /* goalsCoach.xcdatamodeld in Sources */,
 			);
