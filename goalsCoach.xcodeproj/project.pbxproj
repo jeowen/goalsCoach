@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5686B00B1CD7B0FF00FF8B77 /* earlyAM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0001CD7B0FF00FF8B77 /* earlyAM.jpg */; };
+		5686B00C1CD7B0FF00FF8B77 /* earlyNight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0011CD7B0FF00FF8B77 /* earlyNight.jpg */; };
+		5686B00D1CD7B0FF00FF8B77 /* earlyPM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0021CD7B0FF00FF8B77 /* earlyPM.jpg */; };
+		5686B00E1CD7B0FF00FF8B77 /* lateAM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0031CD7B0FF00FF8B77 /* lateAM.jpg */; };
+		5686B00F1CD7B0FF00FF8B77 /* lateNight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0041CD7B0FF00FF8B77 /* lateNight.jpg */; };
+		5686B0101CD7B0FF00FF8B77 /* latePM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0051CD7B0FF00FF8B77 /* latePM.jpg */; };
+		5686B0111CD7B0FF00FF8B77 /* midnight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0061CD7B0FF00FF8B77 /* midnight.jpg */; };
+		5686B0121CD7B0FF00FF8B77 /* noon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0071CD7B0FF00FF8B77 /* noon.jpg */; };
+		5686B0131CD7B0FF00FF8B77 /* stars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0081CD7B0FF00FF8B77 /* stars.jpg */; };
+		5686B0141CD7B0FF00FF8B77 /* sunrise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B0091CD7B0FF00FF8B77 /* sunrise.jpg */; };
+		5686B0151CD7B0FF00FF8B77 /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5686B00A1CD7B0FF00FF8B77 /* sunset.jpg */; };
+		5686B01B1CD7B92800FF8B77 /* GoalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5686B01A1CD7B92800FF8B77 /* GoalsTableViewController.m */; };
 		56DFC45C1CD406F9005B36B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DFC45B1CD406F9005B36B8 /* main.m */; };
 		56DFC45F1CD406F9005B36B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DFC45E1CD406F9005B36B8 /* AppDelegate.m */; };
-		56DFC4621CD406F9005B36B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DFC4611CD406F9005B36B8 /* ViewController.m */; };
 		56DFC4681CD406FA005B36B8 /* goalsCoach.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56DFC4661CD406FA005B36B8 /* goalsCoach.xcdatamodeld */; };
 		56DFC46A1CD406FA005B36B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56DFC4691CD406FA005B36B8 /* Assets.xcassets */; };
 		56DFC46D1CD406FA005B36B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56DFC46B1CD406FA005B36B8 /* LaunchScreen.storyboard */; };
@@ -35,12 +46,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5686B0001CD7B0FF00FF8B77 /* earlyAM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earlyAM.jpg; sourceTree = "<group>"; };
+		5686B0011CD7B0FF00FF8B77 /* earlyNight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earlyNight.jpg; sourceTree = "<group>"; };
+		5686B0021CD7B0FF00FF8B77 /* earlyPM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earlyPM.jpg; sourceTree = "<group>"; };
+		5686B0031CD7B0FF00FF8B77 /* lateAM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lateAM.jpg; sourceTree = "<group>"; };
+		5686B0041CD7B0FF00FF8B77 /* lateNight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lateNight.jpg; sourceTree = "<group>"; };
+		5686B0051CD7B0FF00FF8B77 /* latePM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = latePM.jpg; sourceTree = "<group>"; };
+		5686B0061CD7B0FF00FF8B77 /* midnight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = midnight.jpg; sourceTree = "<group>"; };
+		5686B0071CD7B0FF00FF8B77 /* noon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noon.jpg; sourceTree = "<group>"; };
+		5686B0081CD7B0FF00FF8B77 /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpg; sourceTree = "<group>"; };
+		5686B0091CD7B0FF00FF8B77 /* sunrise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunrise.jpg; sourceTree = "<group>"; };
+		5686B00A1CD7B0FF00FF8B77 /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
+		5686B0191CD7B92800FF8B77 /* GoalsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsTableViewController.h; sourceTree = "<group>"; };
+		5686B01A1CD7B92800FF8B77 /* GoalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsTableViewController.m; sourceTree = "<group>"; };
 		56DFC4571CD406F9005B36B8 /* goalsCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goalsCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56DFC45B1CD406F9005B36B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56DFC45D1CD406F9005B36B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56DFC45E1CD406F9005B36B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		56DFC4601CD406F9005B36B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		56DFC4611CD406F9005B36B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		56DFC4671CD406FA005B36B8 /* goalsCoach.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goalsCoach.xcdatamodel; sourceTree = "<group>"; };
 		56DFC4691CD406FA005B36B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56DFC46C1CD406FA005B36B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +100,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5686AFFF1CD7AF7200FF8B77 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5686B0001CD7B0FF00FF8B77 /* earlyAM.jpg */,
+				5686B0011CD7B0FF00FF8B77 /* earlyNight.jpg */,
+				5686B0021CD7B0FF00FF8B77 /* earlyPM.jpg */,
+				5686B0031CD7B0FF00FF8B77 /* lateAM.jpg */,
+				5686B0041CD7B0FF00FF8B77 /* lateNight.jpg */,
+				5686B0051CD7B0FF00FF8B77 /* latePM.jpg */,
+				5686B0061CD7B0FF00FF8B77 /* midnight.jpg */,
+				5686B0071CD7B0FF00FF8B77 /* noon.jpg */,
+				5686B0081CD7B0FF00FF8B77 /* stars.jpg */,
+				5686B0091CD7B0FF00FF8B77 /* sunrise.jpg */,
+				5686B00A1CD7B0FF00FF8B77 /* sunset.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		56DFC44E1CD406F9005B36B8 = {
 			isa = PBXGroup;
 			children = (
@@ -101,15 +141,16 @@
 		56DFC4591CD406F9005B36B8 /* goalsCoach */ = {
 			isa = PBXGroup;
 			children = (
+				5686AFFF1CD7AF7200FF8B77 /* Images */,
 				56DFC45D1CD406F9005B36B8 /* AppDelegate.h */,
 				56DFC45E1CD406F9005B36B8 /* AppDelegate.m */,
-				56DFC4601CD406F9005B36B8 /* ViewController.h */,
-				56DFC4611CD406F9005B36B8 /* ViewController.m */,
 				56DFC4691CD406FA005B36B8 /* Assets.xcassets */,
 				56DFC46B1CD406FA005B36B8 /* LaunchScreen.storyboard */,
 				56DFC46E1CD406FA005B36B8 /* Info.plist */,
 				56DFC4661CD406FA005B36B8 /* goalsCoach.xcdatamodeld */,
 				56DFC45A1CD406F9005B36B8 /* Supporting Files */,
+				5686B0191CD7B92800FF8B77 /* GoalsTableViewController.h */,
+				5686B01A1CD7B92800FF8B77 /* GoalsTableViewController.m */,
 			);
 			path = goalsCoach;
 			sourceTree = "<group>";
@@ -243,8 +284,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5686B0151CD7B0FF00FF8B77 /* sunset.jpg in Resources */,
+				5686B00C1CD7B0FF00FF8B77 /* earlyNight.jpg in Resources */,
+				5686B0121CD7B0FF00FF8B77 /* noon.jpg in Resources */,
+				5686B00E1CD7B0FF00FF8B77 /* lateAM.jpg in Resources */,
+				5686B0111CD7B0FF00FF8B77 /* midnight.jpg in Resources */,
+				5686B0131CD7B0FF00FF8B77 /* stars.jpg in Resources */,
+				5686B00B1CD7B0FF00FF8B77 /* earlyAM.jpg in Resources */,
+				5686B00F1CD7B0FF00FF8B77 /* lateNight.jpg in Resources */,
+				5686B0101CD7B0FF00FF8B77 /* latePM.jpg in Resources */,
+				5686B00D1CD7B0FF00FF8B77 /* earlyPM.jpg in Resources */,
 				56DFC46D1CD406FA005B36B8 /* LaunchScreen.storyboard in Resources */,
 				56DFC46A1CD406FA005B36B8 /* Assets.xcassets in Resources */,
+				5686B0141CD7B0FF00FF8B77 /* sunrise.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +321,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56DFC4621CD406F9005B36B8 /* ViewController.m in Sources */,
 				56DFC45F1CD406F9005B36B8 /* AppDelegate.m in Sources */,
 				56DFC45C1CD406F9005B36B8 /* main.m in Sources */,
+				5686B01B1CD7B92800FF8B77 /* GoalsTableViewController.m in Sources */,
 				56DFC4681CD406FA005B36B8 /* goalsCoach.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
