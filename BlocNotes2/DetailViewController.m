@@ -32,6 +32,7 @@
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
         self.goalName.text = [self.detailItem valueForKey:@"goalName"];
+        self.goalName.backgroundColor = [UIColor colorWithRed:(204/255.0) green:(229/255.0) blue:(255/255.0) alpha:1] ;
     }
 }
 
