@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>goalsCoach.xcscheme</key>
+		<key>BlocNotes2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>56DFC4561CD406F9005B36B8</key>
+		<key>563CD8D31D0932910021A77E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56DFC4721CD406FA005B36B8</key>
+		<key>563CD8F21D0932920021A77E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56DFC47D1CD406FA005B36B8</key>
+		<key>563CD8FD1D0932920021A77E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
