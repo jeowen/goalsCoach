@@ -49,6 +49,9 @@
                                 <rect key="frame" x="20" y="91" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="JEX-9P-axG" eventType="editingChanged" id="vhV-Bm-bs2"/>
+                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZS1-FY-yI4">
                                 <rect key="frame" x="18" y="153" width="118" height="31"/>

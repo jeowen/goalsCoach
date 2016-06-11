@@ -16,7 +16,14 @@
 
 @implementation DetailViewController
 
+#pragma mark- Capture text field
+- (IBAction)textFieldDidChange:(UITextField *)sender {
+    NSString *enteredText = sender.text;
+    NSLog(@"you entered the text: %@", enteredText);
+}
+
 #pragma mark - Managing the detail item
+
 
 - (void)setDetailItem:(id)newDetailItem {
     if (_detailItem != newDetailItem) {
@@ -32,6 +39,7 @@
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
         self.goalName.text = [self.detailItem valueForKey:@"goalName"];
+      //  NSLog(@"about to print the goalName: %@", _goalName.text);
         self.goalName.backgroundColor = [UIColor colorWithRed:(204/255.0) green:(229/255.0) blue:(255/255.0) alpha:1] ;
     }
 }
@@ -40,6 +48,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+  
+    
 }
 
 - (void)didReceiveMemoryWarning {
