@@ -11,22 +11,32 @@
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *noteBodyTextView;
 @property (weak, nonatomic) IBOutlet UITextField *goalName;
+@property (weak, nonatomic) IBOutlet UISlider *goalValue;
 
 @end
 
 @implementation DetailViewController
 
+- (IBAction)goalValueChanged:(UISlider *)sender {
+    int valueOfSlider = self.goalValue.value;
+    NSLog(@"value of slider: %d", valueOfSlider);
+    
+}
+
 #pragma mark- Capture text field
 - (IBAction)textFieldDidChange:(UITextField *)sender {
     NSString *enteredText = sender.text;
     NSLog(@"you entered the text: %@", enteredText);
+    // update goalName in core data
+    // NEXT: set up a delegate protocol (beaming signal) and set up a listener (radio dish) in MasterViewController
+    // or somewhere where it can easily save to core data
+    // - need a data handling class to update goalName with enteredText
     
 }
 - (IBAction)textFieldDidFinish:(UITextField *)sender {
     NSString *enteredText = sender.text;
     NSLog(@"you FINISHED the text: %@", enteredText);
-    // update goalName in core data
-    // set up a delegate protocol (beaming signal) and set up a listener (radio dish) in MasterViewController
+
 }
 
 #pragma mark - Managing the detail item
@@ -44,6 +54,7 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
+        // NEXT: retrieve a specific ins
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
         self.goalName.text = [self.detailItem valueForKey:@"goalName"];
       //  NSLog(@"about to print the goalName: %@", _goalName.text);
