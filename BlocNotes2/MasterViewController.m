@@ -44,6 +44,7 @@
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
     [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
     [newManagedObject setValue:[NSDate date] forKey:@"dateCreated"];
+    // [newManagedObject setValue: @"test goal" forKey:@"goalName"];
 
         
     // Save the context.

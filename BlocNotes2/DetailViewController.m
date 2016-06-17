@@ -20,6 +20,13 @@
 - (IBAction)textFieldDidChange:(UITextField *)sender {
     NSString *enteredText = sender.text;
     NSLog(@"you entered the text: %@", enteredText);
+    
+}
+- (IBAction)textFieldDidFinish:(UITextField *)sender {
+    NSString *enteredText = sender.text;
+    NSLog(@"you FINISHED the text: %@", enteredText);
+    // update goalName in core data
+    // set up a delegate protocol (beaming signal) and set up a listener (radio dish) in MasterViewController
 }
 
 #pragma mark - Managing the detail item

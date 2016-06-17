@@ -51,6 +51,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="textFieldDidChange:" destination="JEX-9P-axG" eventType="editingChanged" id="vhV-Bm-bs2"/>
+                                    <action selector="textFieldDidFinish:" destination="JEX-9P-axG" eventType="editingDidEnd" id="xOm-iB-5Vy"/>
                                 </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZS1-FY-yI4">
