@@ -8,6 +8,8 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "DataSource.h"
+#import "Goals.h"
 
 @interface MasterViewController ()
 
@@ -79,14 +81,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+//    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+//    return [sectionInfo numberOfObjects];
+     return [DataSource sharedInstance].goalItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        
+    // NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    NSManagedObject *object = [DataSource sharedInstance].goalItems[indexPath.row];
     [self configureCell:cell withObject:object];
+
+    
     return cell;
 }
 

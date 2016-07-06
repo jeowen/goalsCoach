@@ -55,7 +55,7 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        // NEXT: retrieve a specific ins
+        // NEXT: retrieve a specific instance
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
         self.goalName.text = [self.detailItem valueForKey:@"goalName"];
       //  NSLog(@"about to print the goalName: %@", _goalName.text);
@@ -74,7 +74,9 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    // do the save
+    // save goalName & goalValue & currentDate to Core Data
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
