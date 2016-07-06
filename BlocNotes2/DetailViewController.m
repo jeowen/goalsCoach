@@ -37,6 +37,7 @@
     NSString *enteredText = sender.text;
     NSLog(@"you FINISHED the text: %@", enteredText);
 
+  //  [[DataSource sharedInstance] saveContext];
 }
 
 #pragma mark - Managing the detail item
@@ -69,6 +70,11 @@
     
   
     
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    // do the save
 }
 
 - (void)didReceiveMemoryWarning {
