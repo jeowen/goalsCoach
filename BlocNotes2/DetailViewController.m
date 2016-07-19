@@ -21,7 +21,9 @@
 - (IBAction)goalValueChanged:(UISlider *)sender {
     int valueOfSlider = self.goalValue.value;
     NSLog(@"value of slider: %d", valueOfSlider);
-    
+    // set goalValueDisplay label value to be = slider
+    NSString* sliderValueString = [NSString stringWithFormat:@"%i", valueOfSlider];
+    self.goalValueDisplay.text = sliderValueString;
 }
 
 #pragma mark- Capture text field

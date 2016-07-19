@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *leftAnchor;
 @property (weak, nonatomic) IBOutlet UITextField *rightAnchor;
 
+@property (weak, nonatomic) IBOutlet UILabel *goalValueDisplay;
 @end
 

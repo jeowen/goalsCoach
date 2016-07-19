@@ -33,13 +33,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="292" width="560" height="17"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3q-AP-F4h">
                                 <rect key="frame" x="20" y="91" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -80,28 +73,32 @@
                                     <action selector="textFieldDidFinish:" destination="JEX-9P-axG" eventType="editingDidEnd" id="B0P-ds-jMt"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7O-Yc-zOm">
+                                <rect key="frame" x="169" y="243" width="132" height="81"/>
+                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="46"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="ZS1-FY-yI4" secondAttribute="leading" id="Bo2-7L-NWK"/>
                             <constraint firstItem="jhR-gC-ClG" firstAttribute="centerY" secondItem="Ma5-zO-azk" secondAttribute="centerY" id="Cpm-aC-yl3"/>
                             <constraint firstItem="Ma5-zO-azk" firstAttribute="top" secondItem="ZS1-FY-yI4" secondAttribute="bottom" constant="22" id="Gqc-dX-2QQ"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
+                            <constraint firstItem="Z7O-Yc-zOm" firstAttribute="centerX" secondItem="ZS1-FY-yI4" secondAttribute="centerX" id="JiD-mz-RZp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="g3q-AP-F4h" secondAttribute="leading" id="Xhn-PT-9AS"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
+                            <constraint firstItem="Z7O-Yc-zOm" firstAttribute="top" secondItem="Ma5-zO-azk" secondAttribute="bottom" constant="3" id="bHz-sn-3q1"/>
                             <constraint firstItem="ZS1-FY-yI4" firstAttribute="top" secondItem="ura-Av-TZz" secondAttribute="bottom" constant="32" id="s4o-z4-Sx0"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
                             <constraint firstItem="g3q-AP-F4h" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="27" id="xyh-fe-hfw"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Your Goal" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
                         <outlet property="goalName" destination="ura-Av-TZz" id="0Zi-Bj-DzP"/>
                         <outlet property="goalValue" destination="ZS1-FY-yI4" id="GrW-jC-fqu"/>
+                        <outlet property="goalValueDisplay" destination="Z7O-Yc-zOm" id="J9B-W6-vWj"/>
                         <outlet property="leftAnchor" destination="Ma5-zO-azk" id="Qkq-sP-LMB"/>
-                        <outlet property="noteBodyTextView" destination="0XM-y9-sOw" id="ne0-fG-b4t"/>
                         <outlet property="rightAnchor" destination="jhR-gC-ClG" id="a4l-3e-dXz"/>
                     </connections>
                 </viewController>
