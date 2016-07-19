@@ -50,6 +50,7 @@
 //    NSString *newGoal = @"test goal";
 //    [newManagedObject setValue: newGoal forKey:@"goalName"];
 
+    
         
     // Save the context.
     NSError *error = nil;
@@ -59,6 +60,10 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+    
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 
 #pragma mark - Segues
@@ -83,14 +88,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
 //    return [sectionInfo numberOfObjects];
-     return [DataSource sharedInstance].goalItems.count;
+    return [self.fetchedResultsController.fetchedObjects count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
         
-    // NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    NSManagedObject *object = [DataSource sharedInstance].goalItems[indexPath.row];
+    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+   // NSManagedObject *object = [DataSource sharedInstance].goalItems[indexPath.row];
     [self configureCell:cell withObject:object];
 
     

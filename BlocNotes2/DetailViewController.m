@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "DataSource.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *noteBodyTextView;
@@ -36,6 +37,8 @@
 - (IBAction)textFieldDidFinish:(UITextField *)sender {
     NSString *enteredText = sender.text;
     NSLog(@"you FINISHED the text: %@", enteredText);
+    
+    [self.detailItem setValue:enteredText forKey:@"goalName"];
 
   //  [[DataSource sharedInstance] saveContext];
 }
@@ -75,7 +78,8 @@
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     // save goalName & goalValue & currentDate to Core Data
-    
+    // Save the context.
+    [[DataSource sharedInstance] saveContext];
     
 }
 
