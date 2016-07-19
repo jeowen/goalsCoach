@@ -60,10 +60,32 @@
                                     <action selector="goalValueChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="8rA-Ny-J2u"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100% successful" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhR-gC-ClG">
+                                <rect key="frame" x="224" y="205" width="147" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.23830764358108109" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="JEX-9P-axG" eventType="editingChanged" id="TZN-BR-tOU"/>
+                                    <action selector="textFieldDidFinish:" destination="JEX-9P-axG" eventType="editingDidEnd" id="NaD-l3-0S6"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0% successful" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ma5-zO-azk">
+                                <rect key="frame" x="28" y="205" width="147" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="0.39664273648648651" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="JEX-9P-axG" eventType="editingChanged" id="Edn-Xf-IO2"/>
+                                    <action selector="textFieldDidFinish:" destination="JEX-9P-axG" eventType="editingDidEnd" id="B0P-ds-jMt"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="ZS1-FY-yI4" secondAttribute="leading" id="Bo2-7L-NWK"/>
+                            <constraint firstItem="jhR-gC-ClG" firstAttribute="centerY" secondItem="Ma5-zO-azk" secondAttribute="centerY" id="Cpm-aC-yl3"/>
+                            <constraint firstItem="Ma5-zO-azk" firstAttribute="top" secondItem="ZS1-FY-yI4" secondAttribute="bottom" constant="22" id="Gqc-dX-2QQ"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
                             <constraint firstAttribute="leadingMargin" secondItem="g3q-AP-F4h" secondAttribute="leading" id="Xhn-PT-9AS"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
@@ -78,7 +100,9 @@
                         <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
                         <outlet property="goalName" destination="ura-Av-TZz" id="0Zi-Bj-DzP"/>
                         <outlet property="goalValue" destination="ZS1-FY-yI4" id="GrW-jC-fqu"/>
+                        <outlet property="leftAnchor" destination="Ma5-zO-azk" id="Qkq-sP-LMB"/>
                         <outlet property="noteBodyTextView" destination="0XM-y9-sOw" id="ne0-fG-b4t"/>
+                        <outlet property="rightAnchor" destination="jhR-gC-ClG" id="a4l-3e-dXz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
