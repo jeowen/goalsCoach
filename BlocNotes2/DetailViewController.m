@@ -42,7 +42,6 @@
     
     [self.detailItem setValue:enteredText forKey:@"goalName"];
 
-  //  [[DataSource sharedInstance] saveContext];
 }
 
 #pragma mark - Managing the detail item
@@ -62,7 +61,8 @@
     if (self.detailItem) {
         // NEXT: retrieve a specific instance
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
-        self.goalName.text = [self.detailItem valueForKey:@"goalName"];
+        //self.goalName.text = [self.detailItem valueForKey:@"goalName"];
+        self.goalName.text = [[self.detailItem valueForKey:@"goalName"] description];
       //  NSLog(@"about to print the goalName: %@", _goalName.text);
         self.goalName.backgroundColor = [UIColor colorWithRed:(204/255.0) green:(229/255.0) blue:(255/255.0) alpha:1] ;
     }
@@ -79,9 +79,22 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    // save goalName & goalValue & currentDate to Core Data
-    // Save the context.
-    [[DataSource sharedInstance] saveContext];
+    // stage goalName & goalValue & currentDate for saving to Core Data
+    
+    [self.detailItem setValue:self.goalName.text forKey:@"goalName"];
+    
+    NSString *existingUpdates = [[self.detailItem valueForKey:@"udpates"] description];
+    NSString *updatedUpdates = [NSString stringWithFormat:@"%@, %@:%@", existingUpdates, [NSDate date],self.goalValueDisplay.text];
+    [self.detailItem setValue:updatedUpdates forKey:@"updates"];
+    
+    // save context
+    
+//    NSError *saveError = nil;
+//    
+//    if (![self.detailItem.managedObjectContext save:&saveError]) {
+//        NSLog(@"Unable to save managed object context.");
+//        NSLog(@"%@, %@", saveError, saveError.localizedDescription);
+//    }
     
 }
 
