@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "DataSource.h"
+#import "Event.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *noteBodyTextView;
@@ -40,8 +41,9 @@
     NSString *enteredText = sender.text;
     NSLog(@"you FINISHED the text: %@", enteredText);
     
-    [self.detailItem setValue:enteredText forKey:@"goalName"];
-
+    self.detailItem.goalName = enteredText;
+    
+  
 }
 
 #pragma mark - Managing the detail item
@@ -81,20 +83,18 @@
     [super viewWillDisappear:animated];
     // stage goalName & goalValue & currentDate for saving to Core Data
     
-    [self.detailItem setValue:self.goalName.text forKey:@"goalName"];
-    
-    NSString *existingUpdates = [[self.detailItem valueForKey:@"udpates"] description];
-    NSString *updatedUpdates = [NSString stringWithFormat:@"%@, %@:%@", existingUpdates, [NSDate date],self.goalValueDisplay.text];
-    [self.detailItem setValue:updatedUpdates forKey:@"updates"];
+    //NSString *existingUpdates = [[self.detailItem valueForKey:@"udpates"] description];
+    //NSString *updatedUpdates = [NSString stringWithFormat:@"%@, %@:%@", existingUpdates, [NSDate date],self.goalValueDisplay.text];
+    //[self.detailItem setValue:updatedUpdates forKey:@"updates"];
     
     // save context
     
-//    NSError *saveError = nil;
-//    
-//    if (![self.detailItem.managedObjectContext save:&saveError]) {
-//        NSLog(@"Unable to save managed object context.");
-//        NSLog(@"%@, %@", saveError, saveError.localizedDescription);
-//    }
+    NSError *saveError = nil;
+    
+    if (![self.detailItem.managedObjectContext save:&saveError]) {
+        NSLog(@"Unable to save managed object context.");
+        NSLog(@"%@, %@", saveError, saveError.localizedDescription);
+    }
     
 }
 

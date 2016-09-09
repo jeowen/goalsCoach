@@ -13,7 +13,7 @@
 + (instancetype) sharedInstance;
 
 
-@property (nonatomic, strong, readonly) NSArray *goalItems;
+
 
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

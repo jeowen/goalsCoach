@@ -7,11 +7,10 @@
 //
 
 #import "DataSource.h"
-#import "Goals.h"
+
 
 @interface DataSource ()
 
-@property (nonatomic, strong) NSArray *mediaItems;
 
 @end
 
@@ -30,26 +29,14 @@
     self = [super init];
     
     if (self) {
-        [self addRandomData];
+
         //[self retrieveData];
     }
     
     return self;
 }
-- (void) retrieveData {
-   // do something here to retrieve the data!! (replace addRandomData)
-}
 
-- (void) addRandomData {
-    NSMutableArray *goalItemsCoreData = [NSMutableArray array];
-    Goals *goals = [[Goals alloc] init];
-    goals.goalName = [NSString stringWithFormat:@"To reduce worry"];
-    
-    NSDate *now = [NSDate date];
-    goals.dateCreated = now;
-   
-    [goalItemsCoreData addObject:goals];
-}
+
 
 #pragma mark - Core Data stack
 

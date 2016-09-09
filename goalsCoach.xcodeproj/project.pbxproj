@@ -17,8 +17,9 @@
 		563CD8ED1D0932910021A77E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563CD8EB1D0932910021A77E /* LaunchScreen.storyboard */; };
 		563CD8F81D0932920021A77E /* BlocNotes2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8F71D0932920021A77E /* BlocNotes2Tests.m */; };
 		563CD9031D0932920021A77E /* BlocNotes2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD9021D0932920021A77E /* BlocNotes2UITests.m */; };
+		5652F9521D7537A700EA1B8D /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */; };
+		5652F9531D7537A700EA1B8D /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 5652F9511D7537A700EA1B8D /* Event.m */; };
 		568318C31D2CBDF00047F2D3 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 568318C21D2CBDF00047F2D3 /* DataSource.m */; };
-		568318C61D2CC0E20047F2D3 /* Goals.m in Sources */ = {isa = PBXBuildFile; fileRef = 568318C51D2CC0E20047F2D3 /* Goals.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +59,12 @@
 		563CD8FE1D0932920021A77E /* goalsCoach.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalsCoach.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		563CD9021D0932920021A77E /* BlocNotes2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocNotes2UITests.m; sourceTree = "<group>"; };
 		563CD9041D0932920021A77E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5652F94E1D7537A700EA1B8D /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Event+CoreDataProperties.h"; path = "../Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Event+CoreDataProperties.m"; path = "../Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5652F9501D7537A700EA1B8D /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../Event.h; sourceTree = "<group>"; };
+		5652F9511D7537A700EA1B8D /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
 		568318C11D2CBDF00047F2D3 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		568318C21D2CBDF00047F2D3 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
-		568318C41D2CC0E20047F2D3 /* Goals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goals.h; sourceTree = "<group>"; };
-		568318C51D2CC0E20047F2D3 /* Goals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goals.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,10 @@
 		563CD8D61D0932910021A77E /* BlocNotes2 */ = {
 			isa = PBXGroup;
 			children = (
+				5652F94E1D7537A700EA1B8D /* Event+CoreDataProperties.h */,
+				5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */,
+				5652F9501D7537A700EA1B8D /* Event.h */,
+				5652F9511D7537A700EA1B8D /* Event.m */,
 				563CD8DA1D0932910021A77E /* AppDelegate.h */,
 				563CD8DB1D0932910021A77E /* AppDelegate.m */,
 				563CD8E01D0932910021A77E /* MasterViewController.h */,
@@ -120,8 +127,6 @@
 				563CD8E41D0932910021A77E /* DetailViewController.m */,
 				568318C11D2CBDF00047F2D3 /* DataSource.h */,
 				568318C21D2CBDF00047F2D3 /* DataSource.m */,
-				568318C41D2CC0E20047F2D3 /* Goals.h */,
-				568318C51D2CC0E20047F2D3 /* Goals.m */,
 				563CD8E61D0932910021A77E /* Main.storyboard */,
 				563CD8E91D0932910021A77E /* Assets.xcassets */,
 				563CD8EB1D0932910021A77E /* LaunchScreen.storyboard */,
@@ -291,7 +296,8 @@
 				563CD8E51D0932910021A77E /* DetailViewController.m in Sources */,
 				563CD8E21D0932910021A77E /* MasterViewController.m in Sources */,
 				568318C31D2CBDF00047F2D3 /* DataSource.m in Sources */,
-				568318C61D2CC0E20047F2D3 /* Goals.m in Sources */,
+				5652F9521D7537A700EA1B8D /* Event+CoreDataProperties.m in Sources */,
+				5652F9531D7537A700EA1B8D /* Event.m in Sources */,
 				563CD8DC1D0932910021A77E /* AppDelegate.m in Sources */,
 				563CD8DF1D0932910021A77E /* BlocNotes2.xcdatamodeld in Sources */,
 				563CD8D91D0932910021A77E /* main.m in Sources */,
