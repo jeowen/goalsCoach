@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *noteBodyTextView;
 @property (weak, nonatomic) IBOutlet UITextField *goalName;
 @property (weak, nonatomic) IBOutlet UISlider *goalValue;
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
 
@@ -28,6 +29,30 @@
     // set goalValueDisplay label value to be = slider
     NSString* sliderValueString = [NSString stringWithFormat:@"%i", valueOfSlider];
     self.goalValueDisplay.text = sliderValueString;
+    [self.goalName resignFirstResponder];
+    
+    // store to core data
+    //self.detailItem.goalName = enteredText;
+    
+    // need jsonDict.  get text from core data
+    // convert text into json Dict
+    NSString *jsonString = self.detailItem.updates;
+    
+    //jsonText should be in format:
+    //  { "date":"13:44:59GMT", "goalValue":70 }
+   
+    if (!([jsonString length] == 0)){
+        NSError *jsonError;
+        NSData *objectData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:objectData
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:&jsonError];
+    }
+    
+    // get current date in "13:44:59GMT" format
+    // write date: current date, goalValue = 70 into jsonResponse
+    // convert jsonResponse back into JSON string
+    // write string to core data for updates
     
 }
 
@@ -35,10 +60,6 @@
 - (IBAction)textFieldDidChange:(UITextField *)sender {
     NSString *enteredText = sender.text;
     NSLog(@"you entered the text: %@", enteredText);
-    // update goalName in core data
-    // NEXT: set up a delegate protocol (beaming signal) and set up a listener (radio dish) in MasterViewController
-    // or somewhere where it can easily save to core data
-    // - need a data handling class to update goalName with enteredText
     
 }
 - (IBAction)textFieldDidFinish:(UITextField *)sender {
@@ -91,8 +112,23 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
-  
+    //The setup code for Tap Gesture Recognizer
+    // Create and initialize a tap gesture
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc]
+                                             initWithTarget:self action:@selector(respondToTapGesture:)];
     
+    // Specify that the gesture must be a single tap
+    tapRecognizer.numberOfTapsRequired = 1;
+    
+    // Add the tap gesture recognizer to the view
+    [self.view addGestureRecognizer:tapRecognizer];
+    
+    // Do any additional setup after loading the view, typically from a nib
+}
+
+- (void) respondToTapGesture:(UITapGestureRecognizer *)recognizer  {
+    // do something here
+    [self.goalName resignFirstResponder];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
