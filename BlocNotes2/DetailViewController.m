@@ -17,6 +17,9 @@
 
 @end
 
+
+
+
 @implementation DetailViewController
 
 - (IBAction)goalValueChanged:(UISlider *)sender {
@@ -25,6 +28,7 @@
     // set goalValueDisplay label value to be = slider
     NSString* sliderValueString = [NSString stringWithFormat:@"%i", valueOfSlider];
     self.goalValueDisplay.text = sliderValueString;
+    
 }
 
 #pragma mark- Capture text field
@@ -45,6 +49,12 @@
     
   
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 #pragma mark - Managing the detail item
 
@@ -67,6 +77,12 @@
         self.goalName.text = [[self.detailItem valueForKey:@"goalName"] description];
       //  NSLog(@"about to print the goalName: %@", _goalName.text);
         self.goalName.backgroundColor = [UIColor colorWithRed:(204/255.0) green:(229/255.0) blue:(255/255.0) alpha:1] ;
+        
+      // get string of previous updates for this goal
+      // get date of last update
+      // if date of last update is same calendar day, show last update
+      // from slider value
+     
     }
 }
 
