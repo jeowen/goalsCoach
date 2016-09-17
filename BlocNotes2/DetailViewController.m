@@ -25,6 +25,8 @@
 
 - (IBAction)goalValueChanged:(UISlider *)sender {
     int valueOfSlider = self.goalValue.value;
+    [self.goalValue setContinuous: NO];
+    
     NSLog(@"value of slider: %d", valueOfSlider);
     // set goalValueDisplay label value to be = slider
     NSString* sliderValueString = [NSString stringWithFormat:@"%i", valueOfSlider];
@@ -39,20 +41,45 @@
     NSString *jsonString = self.detailItem.updates;
     
     //jsonText should be in format:
-    //  { "date":"13:44:59GMT", "goalValue":70 }
+    //  { "date":"091916", "goalValue":70 }
    
+    NSDictionary *json;
+    
     if (!([jsonString length] == 0)){
         NSError *jsonError;
         NSData *objectData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:objectData
+        json = [NSJSONSerialization JSONObjectWithData:objectData
                                                              options:NSJSONReadingMutableContainers
                                                                error:&jsonError];
     }
     
     // get current date in "13:44:59GMT" format
-    // write date: current date, goalValue = 70 into jsonResponse
-    // convert jsonResponse back into JSON string
-    // write string to core data for updates
+    
+    //UTC Date
+    NSDate *currentDate = [[NSDate alloc] init];
+    // convert date NSDate to string:
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
+    NSString *dateString = [dateFormatter stringFromDate:currentDate];
+    
+    NSLog(@"The Date: %@", dateString);
+    
+    
+NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    NSInteger day = [components day];
+    NSInteger month = [components month];
+    NSInteger year = [components year];
+    
+    NSString *monthDayYear = [NSString stringWithFormat:@"%d%d%d",month, day, year];
+    
+    // iterate through json dictionary to find date = monthDayYear
+    // OVER-WRITE json date: monthDayYear
+    // OVER-WRITE goalValue: self.goalValue for this dictionary entry
+    
+    // convert updated NSDICTIONARY json back to string
+    
+    // write jsonString back to Core Data
     
 }
 
