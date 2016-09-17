@@ -23,9 +23,10 @@
 
 @implementation DetailViewController
 
+
 - (IBAction)goalValueChanged:(UISlider *)sender {
     int valueOfSlider = self.goalValue.value;
-    [self.goalValue setContinuous: NO];
+    // [self.goalValue setContinuous: NO];
     
     NSLog(@"value of slider: %d", valueOfSlider);
     // set goalValueDisplay label value to be = slider
@@ -35,23 +36,43 @@
     
     // store to core data
     //self.detailItem.goalName = enteredText;
+    // only when touch up inside and touch up outside gesture recognizers fire
     
+ 
+    
+}
+- (IBAction)goalValueTouchUpInside:(id)sender {
+    // THIS IS WHERE WE STORE SLIDE TO CORE DATA
+    NSLog(@"\n\nTouchUpInside detected ++++++++++>>>>>");
+}
+- (IBAction)goalValueTouchUpOutside:(id)sender {
+    // THIS IS WHERE WE STORE SLIDE TO CORE DATA
+    NSLog(@"\n\nTouchUpOutside detected ******>>>>>");
     // need jsonDict.  get text from core data
     // convert text into json Dict
     NSString *jsonString = self.detailItem.updates;
     
     //jsonText should be in format:
-    //  { "date":"091916", "goalValue":70 }
-   
+    //  { "updates":[
+    //     {"date":dateString, "value":50},
+    //     {"date":dateString2, "value":70}
+    //  ]
+    //  }
+    
     NSDictionary *json;
     
     if (!([jsonString length] == 0)){
         NSError *jsonError;
         NSData *objectData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
         json = [NSJSONSerialization JSONObjectWithData:objectData
-                                                             options:NSJSONReadingMutableContainers
-                                                               error:&jsonError];
+                                               options:NSJSONReadingMutableContainers
+                                                 error:&jsonError];
     }
+    
+    NSArray *allUpdates = [json objectForKey:@"updates"];
+    //  NSDictionary *updateSingle = [allUpdates objectAtIndex:0];
+    
+    
     
     // get current date in "13:44:59GMT" format
     
@@ -66,21 +87,44 @@
     NSLog(@"The Date: %@", dateString);
     
     
-NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
     NSInteger day = [components day];
     NSInteger month = [components month];
     NSInteger year = [components year];
     
-    NSString *monthDayYear = [NSString stringWithFormat:@"%d%d%d",month, day, year];
+    NSString *yearMonthDay = [NSString stringWithFormat:@"%d%d%d",year, month, day];
+     int valueOfSlider = self.goalValue.value;
+    
+    
+    int numUpdates = [allUpdates count];
+    int k = 0;
+    
+    bool updateFound = 0;
+    while (k < numUpdates){
+        NSDictionary* updateSingle = [allUpdates objectAtIndex:k];
+        NSNumber *updateValue = [updateSingle objectForKey:@"value"];
+        NSString *updateDate = [updateSingle objectForKey:@"date"];
+        if (updateDate == yearMonthDay){
+            // found a match
+            updateFound = 1;
+            // PICK UP HERE: replace value for this date
+        }
+        if (k == numUpdates -1 ){
+            // this is last row with no updateFound, so add the update
+            // valueOfSlider = value to store
+            // yearMonthDay = date to store
+        }
+        
+    }
+    
     
     // iterate through json dictionary to find date = monthDayYear
-    // OVER-WRITE json date: monthDayYear
+    // OVER-WRITE json date: yearMonthDay
     // OVER-WRITE goalValue: self.goalValue for this dictionary entry
     
     // convert updated NSDICTIONARY json back to string
     
     // write jsonString back to Core Data
-    
 }
 
 #pragma mark- Capture text field
