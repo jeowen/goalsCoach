@@ -24,6 +24,7 @@
 @implementation DetailViewController
 
 
+
 - (IBAction)goalValueChanged:(UISlider *)sender {
     int valueOfSlider = self.goalValue.value;
     // [self.goalValue setContinuous: NO];
@@ -44,23 +45,28 @@
 - (IBAction)goalValueTouchUpInside:(id)sender {
     // THIS IS WHERE WE STORE SLIDE TO CORE DATA
     NSLog(@"\n\nTouchUpInside detected ++++++++++>>>>>");
-    NSString * tempString = @"tempString";
-    [self jsonProcessing:tempString];
+    NSString * tempString = @"touchUpInside";
+    [self manageGoalUpdates:tempString];
     
 }
 - (IBAction)goalValueTouchUpOutside:(id)sender {
     // THIS IS WHERE WE STORE SLIDE TO CORE DATA
     NSLog(@"\n\nTouchUpOutside detected ******>>>>>");
-    NSString * tempString = @"tempString";
-    [self jsonProcessing:tempString];
+    NSString * tempString = @"touchUpOutside";
+    [self manageGoalUpdates:tempString];
 }
 
-#pragma mark- JSON processing
-- (void)jsonProcessing:(NSString *)passedText{
+- (IBAction)goalValueEditingDidEnd:(id)sender {
+    NSString * tempString = @"editingDidEnd";
+    [self manageGoalUpdates:tempString];
+}
+
+#pragma mark- manageGoalUpdates
+- (void)manageGoalUpdates:(NSString *)passedText{
     // need jsonDict.  get text from core data
     // convert text into json Dict
     NSString *jsonString = self.detailItem.updates;
-    NSLog(@"###MADE IT TO JSON PROCESSING###\n");
+    NSLog(@"###MADE IT TO manageGoalUpdates### from: %@\n", passedText);
     
     //jsonText should be in format:
     //  { "updates":[
@@ -68,6 +74,13 @@
     //     {"date":dateString2, "value":70}
     //  ]
     //  }
+    
+    // 1. Get sqllite updates string
+    // 2. convert json string to NSDictionary
+    // 3. if entry for YYYMODA = null, add record
+    // 4. if entry is not null, replace record
+    // 5. convert NSDictionary to NSString
+    // 6. update in core data
     
     NSDictionary *json;
     

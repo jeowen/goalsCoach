@@ -93,6 +93,7 @@
                                 </constraints>
                                 <connections>
                                     <action selector="goalValueChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="8rA-Ny-J2u"/>
+                                    <action selector="goalValueEditingDidEnd:" destination="JEX-9P-axG" eventType="editingDidEnd" id="N5D-m7-owE"/>
                                     <action selector="goalValueTouchUpInside:" destination="JEX-9P-axG" eventType="touchUpInside" id="YBe-C9-lDa"/>
                                     <action selector="goalValueTouchUpOutside:" destination="JEX-9P-axG" eventType="touchUpOutside" id="8fE-hy-pnu"/>
                                 </connections>
