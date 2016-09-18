@@ -44,13 +44,23 @@
 - (IBAction)goalValueTouchUpInside:(id)sender {
     // THIS IS WHERE WE STORE SLIDE TO CORE DATA
     NSLog(@"\n\nTouchUpInside detected ++++++++++>>>>>");
+    NSString * tempString = @"tempString";
+    [self jsonProcessing:tempString];
+    
 }
 - (IBAction)goalValueTouchUpOutside:(id)sender {
     // THIS IS WHERE WE STORE SLIDE TO CORE DATA
     NSLog(@"\n\nTouchUpOutside detected ******>>>>>");
+    NSString * tempString = @"tempString";
+    [self jsonProcessing:tempString];
+}
+
+#pragma mark- JSON processing
+- (void)jsonProcessing:(NSString *)passedText{
     // need jsonDict.  get text from core data
     // convert text into json Dict
     NSString *jsonString = self.detailItem.updates;
+    NSLog(@"###MADE IT TO JSON PROCESSING###\n");
     
     //jsonText should be in format:
     //  { "updates":[
@@ -93,7 +103,7 @@
     NSInteger year = [components year];
     
     NSString *yearMonthDay = [NSString stringWithFormat:@"%d%d%d",year, month, day];
-     int valueOfSlider = self.goalValue.value;
+    int valueOfSlider = self.goalValue.value;
     
     
     int numUpdates = [allUpdates count];
