@@ -220,6 +220,11 @@
     [self.view addGestureRecognizer:tapRecognizer];
     
     // Do any additional setup after loading the view, typically from a nib
+    
+    // SET SLIDER VALUE TO PREVIOUS BASELINE, or 50 if NO PREVIOUS UPDATES TO GOAL
+    // - 1. Get array of previous slider values from GoalValue Data Model Entity
+    // - 2. Get most recent goalValue from this array
+    // - 3. initialize slider to this goalValue
 }
 
 - (void) respondToTapGesture:(UITapGestureRecognizer *)recognizer  {
@@ -228,6 +233,8 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
+    // THIS METHOD IS OVER-WRITTEN TO:
+    //  -- STORE GOAL VALUE (IF SLIDER HAS BEEN CHANGED) to CORE DATA
     
     // GET THE CONTEXT
     NSManagedObjectContext *context = [self.detailItem managedObjectContext];
@@ -243,13 +250,14 @@
     NSLog(@"Date as string in yyyyMMdd format = %@\n", dateAsString);
     
     // ASSIGN VALUES TO MEMORY for GoalValue Data Model Entity
-    goalValue.date = [NSDate date];
+    
     // cast string to number
     NSNumber  *dayAsNumber = [NSNumber numberWithInteger: [dateAsString integerValue]];
     
     
     goalValue.day = dayAsNumber;
     goalValue.value = @(self.goalValue.value);
+    goalValue.date = [NSDate date];
     
     // ASSIGN goalValue to detailItem Data Model Entity
     [self.detailItem addGoalValuesObject:goalValue];
