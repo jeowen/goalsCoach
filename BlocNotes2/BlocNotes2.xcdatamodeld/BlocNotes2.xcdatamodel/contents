@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Automatic">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Event" representedClassName="Event">
-        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="goalName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="highAnchor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lowAnchor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timeStamp" optional="YES" attributeType="Date">
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO">
             <userInfo/>
         </attribute>
         <attribute name="updates" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="goalValues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GoalValue" inverseName="event" inverseEntity="GoalValue" syncable="YES"/>
         <userInfo/>
     </entity>
+    <entity name="GoalValue" representedClassName="GoalValue" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="goalValues" inverseEntity="Event" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="135"/>
+        <element name="Event" positionX="261" positionY="189" width="128" height="150"/>
+        <element name="GoalValue" positionX="261" positionY="234" width="128" height="90"/>
     </elements>
 </model>

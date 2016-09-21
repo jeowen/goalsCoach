@@ -8,7 +8,9 @@
 
 #import "DetailViewController.h"
 #import "DataSource.h"
-#import "Event.h"
+#import "Event+CoreDataClass.h"
+#import "GoalValue+CoreDataClass.h"
+
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *noteBodyTextView;
@@ -226,6 +228,21 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
+    
+    NSManagedObjectContext *context = [self.detailItem managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"GoalValue" inManagedObjectContext:context];
+    GoalValue *goalValue = (GoalValue *)[NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    
+    goalValue.date = [NSDate date];
+    goalValue.value = @(self.goalValue.value);
+    
+    [self.detailItem addGoalValuesObject:goalValue];
+    
+    
+   //  self.detailItem.goalValues = NSSet (not ordered; cannot have duplicates); convert to array
+    //    to iterate through it
+    
+    
     [super viewWillDisappear:animated];
     // stage goalName & goalValue & currentDate for saving to Core Data
     

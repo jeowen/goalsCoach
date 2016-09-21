@@ -9,7 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "DataSource.h"
-#import "Event.h"
+#import "Event+CoreDataClass.h"
 
 
 @interface MasterViewController ()
