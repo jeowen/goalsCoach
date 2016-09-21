@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		561CEB021D90E805001CB486 /* Event+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 561CEAFB1D90E805001CB486 /* Event+CoreDataClass.m */; };
-		561CEB041D90E805001CB486 /* GoalValue+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 561CEAFF1D90E805001CB486 /* GoalValue+CoreDataClass.m */; };
-		561CEB051D90E805001CB486 /* GoalValue+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 561CEB011D90E805001CB486 /* GoalValue+CoreDataProperties.m */; };
 		563CD8D91D0932910021A77E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8D81D0932910021A77E /* main.m */; };
 		563CD8DC1D0932910021A77E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8DB1D0932910021A77E /* AppDelegate.m */; };
 		563CD8DF1D0932910021A77E /* BlocNotes2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8DD1D0932910021A77E /* BlocNotes2.xcdatamodeld */; };
@@ -20,6 +18,8 @@
 		563CD8ED1D0932910021A77E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563CD8EB1D0932910021A77E /* LaunchScreen.storyboard */; };
 		563CD8F81D0932920021A77E /* BlocNotes2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8F71D0932920021A77E /* BlocNotes2Tests.m */; };
 		563CD9031D0932920021A77E /* BlocNotes2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD9021D0932920021A77E /* BlocNotes2UITests.m */; };
+		56422A3C1D924A8900520BC4 /* GoalValue+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 56422A391D924A8900520BC4 /* GoalValue+CoreDataClass.m */; };
+		56422A3D1D924A8900520BC4 /* GoalValue+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 56422A3B1D924A8900520BC4 /* GoalValue+CoreDataProperties.m */; };
 		5652F9521D7537A700EA1B8D /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */; };
 		568318C31D2CBDF00047F2D3 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 568318C21D2CBDF00047F2D3 /* DataSource.m */; };
 /* End PBXBuildFile section */
@@ -44,10 +44,6 @@
 /* Begin PBXFileReference section */
 		561CEAFA1D90E805001CB486 /* Event+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Event+CoreDataClass.h"; path = "../Event+CoreDataClass.h"; sourceTree = "<group>"; };
 		561CEAFB1D90E805001CB486 /* Event+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Event+CoreDataClass.m"; path = "../Event+CoreDataClass.m"; sourceTree = "<group>"; };
-		561CEAFE1D90E805001CB486 /* GoalValue+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GoalValue+CoreDataClass.h"; path = "../GoalValue+CoreDataClass.h"; sourceTree = "<group>"; };
-		561CEAFF1D90E805001CB486 /* GoalValue+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GoalValue+CoreDataClass.m"; path = "../GoalValue+CoreDataClass.m"; sourceTree = "<group>"; };
-		561CEB001D90E805001CB486 /* GoalValue+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GoalValue+CoreDataProperties.h"; path = "../GoalValue+CoreDataProperties.h"; sourceTree = "<group>"; };
-		561CEB011D90E805001CB486 /* GoalValue+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GoalValue+CoreDataProperties.m"; path = "../GoalValue+CoreDataProperties.m"; sourceTree = "<group>"; };
 		563CD8D41D0932910021A77E /* goalsCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goalsCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563CD8D81D0932910021A77E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		563CD8DA1D0932910021A77E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +63,10 @@
 		563CD8FE1D0932920021A77E /* goalsCoach.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalsCoach.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		563CD9021D0932920021A77E /* BlocNotes2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocNotes2UITests.m; sourceTree = "<group>"; };
 		563CD9041D0932920021A77E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56422A381D924A8900520BC4 /* GoalValue+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GoalValue+CoreDataClass.h"; path = "../GoalValue+CoreDataClass.h"; sourceTree = "<group>"; };
+		56422A391D924A8900520BC4 /* GoalValue+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GoalValue+CoreDataClass.m"; path = "../GoalValue+CoreDataClass.m"; sourceTree = "<group>"; };
+		56422A3A1D924A8900520BC4 /* GoalValue+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GoalValue+CoreDataProperties.h"; path = "../GoalValue+CoreDataProperties.h"; sourceTree = "<group>"; };
+		56422A3B1D924A8900520BC4 /* GoalValue+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GoalValue+CoreDataProperties.m"; path = "../GoalValue+CoreDataProperties.m"; sourceTree = "<group>"; };
 		5652F94E1D7537A700EA1B8D /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Event+CoreDataProperties.h"; path = "../Event+CoreDataProperties.h"; sourceTree = "<group>"; };
 		5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Event+CoreDataProperties.m"; path = "../Event+CoreDataProperties.m"; sourceTree = "<group>"; };
 		568318C11D2CBDF00047F2D3 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
@@ -123,12 +123,12 @@
 			children = (
 				561CEAFA1D90E805001CB486 /* Event+CoreDataClass.h */,
 				561CEAFB1D90E805001CB486 /* Event+CoreDataClass.m */,
-				561CEAFE1D90E805001CB486 /* GoalValue+CoreDataClass.h */,
-				561CEAFF1D90E805001CB486 /* GoalValue+CoreDataClass.m */,
 				5652F94E1D7537A700EA1B8D /* Event+CoreDataProperties.h */,
 				5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */,
-				561CEB001D90E805001CB486 /* GoalValue+CoreDataProperties.h */,
-				561CEB011D90E805001CB486 /* GoalValue+CoreDataProperties.m */,
+				56422A381D924A8900520BC4 /* GoalValue+CoreDataClass.h */,
+				56422A391D924A8900520BC4 /* GoalValue+CoreDataClass.m */,
+				56422A3A1D924A8900520BC4 /* GoalValue+CoreDataProperties.h */,
+				56422A3B1D924A8900520BC4 /* GoalValue+CoreDataProperties.m */,
 				563CD8DA1D0932910021A77E /* AppDelegate.h */,
 				563CD8DB1D0932910021A77E /* AppDelegate.m */,
 				563CD8E01D0932910021A77E /* MasterViewController.h */,
@@ -307,10 +307,10 @@
 				563CD8E21D0932910021A77E /* MasterViewController.m in Sources */,
 				568318C31D2CBDF00047F2D3 /* DataSource.m in Sources */,
 				5652F9521D7537A700EA1B8D /* Event+CoreDataProperties.m in Sources */,
-				561CEB051D90E805001CB486 /* GoalValue+CoreDataProperties.m in Sources */,
+				56422A3D1D924A8900520BC4 /* GoalValue+CoreDataProperties.m in Sources */,
 				561CEB021D90E805001CB486 /* Event+CoreDataClass.m in Sources */,
-				561CEB041D90E805001CB486 /* GoalValue+CoreDataClass.m in Sources */,
 				563CD8DC1D0932910021A77E /* AppDelegate.m in Sources */,
+				56422A3C1D924A8900520BC4 /* GoalValue+CoreDataClass.m in Sources */,
 				563CD8DF1D0932910021A77E /* BlocNotes2.xcdatamodeld in Sources */,
 				563CD8D91D0932910021A77E /* main.m in Sources */,
 			);

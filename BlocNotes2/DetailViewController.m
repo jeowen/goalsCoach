@@ -240,10 +240,15 @@
     NSDate *dt = [NSDate date];
     NSString *dateAsString = [formatter stringFromDate:dt];
     
-    NSLog(@"%@", dateAsString);
+    NSLog(@"Date as string in yyyyMMdd format = %@\n", dateAsString);
     
     // ASSIGN VALUES TO MEMORY for GoalValue Data Model Entity
     goalValue.date = [NSDate date];
+    // cast string to number
+    NSNumber  *dayAsNumber = [NSNumber numberWithInteger: [dateAsString integerValue]];
+    
+    
+    goalValue.day = dayAsNumber;
     goalValue.value = @(self.goalValue.value);
     
     // ASSIGN goalValue to detailItem Data Model Entity

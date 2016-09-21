@@ -2,7 +2,7 @@
 //  GoalValue+CoreDataProperties.h
 //  goalsCoach
 //
-//  Created by Jason Owen on 9/19/16.
+//  Created by Jason Owen on 9/20/16.
 //  Copyright © 2016 Jason Owen. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSDate *date;
 @property (nullable, nonatomic, copy) NSNumber *value;
+@property (nullable, nonatomic, copy) NSNumber *day;
 @property (nullable, nonatomic, retain) Event *event;
 
 @end
