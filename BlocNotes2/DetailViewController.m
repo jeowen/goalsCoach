@@ -234,6 +234,14 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"GoalValue" inManagedObjectContext:context];
     GoalValue *goalValue = (GoalValue *)[NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
+    // Convert current date (a full timestamp) into a specific day, i.e., YYYYMMDD
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyyMMdd"];
+    NSDate *dt = [NSDate date];
+    NSString *dateAsString = [formatter stringFromDate:dt];
+    
+    NSLog(@"%@", dateAsString);
+    
     // ASSIGN VALUES TO MEMORY for GoalValue Data Model Entity
     goalValue.date = [NSDate date];
     goalValue.value = @(self.goalValue.value);
