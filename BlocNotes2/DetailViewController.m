@@ -225,6 +225,19 @@
     // - 1. Get array of previous slider values from GoalValue Data Model Entity
     // - 2. Get most recent goalValue from this array
     // - 3. initialize slider to this goalValue
+    
+    NSSet *goalValueHistory = self.detailItem.goalValues;
+    NSLog(@"############## The set has %li elements", [goalValueHistory count]);
+    NSArray *result = [[goalValueHistory allObjects] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"day" ascending:YES]]];
+
+    for (id object in result){
+        NSLog(@"---array value = %@\n", object);
+        //NSLog(@"Object - parameter test: %@\n", object.data);
+    }
+    
+//    for (id item in goalValueHistory) {
+//        NSLog(@"goalValueHistory contains item: %@", item);
+//    }
 }
 
 - (void) respondToTapGesture:(UITapGestureRecognizer *)recognizer  {
@@ -247,13 +260,13 @@
     NSDate *dt = [NSDate date];
     NSString *dateAsString = [formatter stringFromDate:dt];
     
-    NSLog(@"Date as string in yyyyMMdd format = %@\n", dateAsString);
+    //NSLog(@"Date as string in yyyyMMdd format = %@\n", dateAsString);
     
     // ASSIGN VALUES TO MEMORY for GoalValue Data Model Entity
     
     // cast string to number
     NSNumber  *dayAsNumber = [NSNumber numberWithInteger: [dateAsString integerValue]];
-    
+    NSLog(@"dayAsNumber yyyyMMdd after casting into NSNumber = %@", dayAsNumber);
     
     goalValue.day = dayAsNumber;
     goalValue.value = @(self.goalValue.value);
