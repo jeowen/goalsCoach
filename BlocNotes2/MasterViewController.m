@@ -14,6 +14,9 @@
 
 @interface MasterViewController ()
 
+
+@property (weak, nonatomic) NSMutableArray* goalsAvailableToShare;
+
 @end
 
 @implementation MasterViewController
@@ -27,12 +30,12 @@
     
     // needs to get list of current goals and create array of goal objects
     
-    NSMutableArray *objectsToShare = [[NSMutableArray alloc] init];
+     NSMutableArray *objectsToShare = [[NSMutableArray alloc] init];
     
-    [objectsToShare addObject:textToShare];
-    [objectsToShare addObject:myWebsite];
+     [objectsToShare addObject:textToShare];
+     [objectsToShare addObject:myWebsite];
     
-    // NSArray *objectsToShare = @[textToShare, myWebsite];
+    // NSMutableArray *objectsToShare = self.goalsAvailableToShare;
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
     NSArray *excludeActivities = @[UIActivityTypeAirDrop,
@@ -160,6 +163,8 @@
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object {
 //    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
     cell.textLabel.text = [[object valueForKey:@"goalName"] description];
+    NSLog(@"found a goal with name: %@", cell.textLabel.text);
+    [self.goalsAvailableToShare addObject:cell.textLabel.text];
 }
 
 #pragma mark - Fetched results controller
