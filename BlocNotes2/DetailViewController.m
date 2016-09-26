@@ -230,9 +230,9 @@
     NSLog(@"############## The set has %li elements", [goalValueHistory count]);
     NSArray *result = [[goalValueHistory allObjects] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"day" ascending:YES]]];
 
-    for (id object in result){
+    for (GoalValue * object in result){
         NSLog(@"---array value = %@\n", object);
-        //NSLog(@"Object - parameter test: %@\n", object.data);
+        NSLog(@"Object - parameter test date: %@\n     day: %@\n     value: %@\n", object.date, object.day, object.value);
     }
     
 //    for (id item in goalValueHistory) {

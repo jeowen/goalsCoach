@@ -25,7 +25,14 @@
     NSString *textToShare = @"be patient";
     NSURL *myWebsite = [NSURL URLWithString:@"https://sciencedelivered.org/"];
     
-    NSArray *objectsToShare = @[textToShare, myWebsite];
+    // needs to get list of current goals and create array of goal objects
+    
+    NSMutableArray *objectsToShare = [[NSMutableArray alloc] init];
+    
+    [objectsToShare addObject:textToShare];
+    [objectsToShare addObject:myWebsite];
+    
+    // NSArray *objectsToShare = @[textToShare, myWebsite];
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
     NSArray *excludeActivities = @[UIActivityTypeAirDrop,
@@ -38,8 +45,9 @@
     
     activityVC.excludedActivityTypes = excludeActivities;
     
-    [self presentViewController:activityVC animated:YES completion:nil];
-    
+    if (objectsToShare.count > 0){
+       [self presentViewController:activityVC animated:YES completion:nil];
+    }
 }
 
 - (void)viewDidLoad {
