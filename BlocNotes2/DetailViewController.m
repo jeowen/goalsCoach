@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UISlider *goalValue;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
+@property (nonatomic, assign) BOOL sliderChanged;
+
 @end
 
 
@@ -36,6 +38,9 @@
     NSString* sliderValueString = [NSString stringWithFormat:@"%i", valueOfSlider];
     self.goalValueDisplay.text = sliderValueString;
     [self.goalName resignFirstResponder];
+    
+    
+    self.sliderChanged = YES;
     
     // store to core data
     //self.detailItem.goalName = enteredText;
@@ -268,29 +273,60 @@
     NSNumber  *dayAsNumber = [NSNumber numberWithInteger: [dateAsString integerValue]];
     NSLog(@"dayAsNumber yyyyMMdd after casting into NSNumber = %@", dayAsNumber);
     
-    goalValue.day = dayAsNumber;
-    goalValue.value = @(self.goalValue.value);
-    goalValue.date = [NSDate date];
-    
-    // ASSIGN goalValue to detailItem Data Model Entity
-    [self.detailItem addGoalValuesObject:goalValue];
-    
-    
-   //  self.detailItem.goalValues = NSSet (not ordered; cannot have duplicates); convert to array
-    //    to iterate through it
-    
-    
-    [super viewWillDisappear:animated];
- 
-    
-    NSError *saveError = nil;
-    
-    // SAVE MANAGED OBJECT CONTEXT
-    if (![self.detailItem.managedObjectContext save:&saveError]) {
-        NSLog(@"Unable to save managed object context.");
-        NSLog(@"%@, %@", saveError, saveError.localizedDescription);
-    }
-    
+    if (self.sliderChanged == YES){
+        // slider was changed, and about to store data
+        NSLog(@"Slider was changed, about to store data!!!");
+        
+        // update an existing value in core data or insert a new value
+        
+           // 1. see if there is an exisitng value of dayAsNumber already in core data
+            NSSet *goalValueHistory = self.detailItem.goalValues;
+            // NSLog(@"############## The set has %li elements", [goalValueHistory count]);
+            NSArray *result = [[goalValueHistory allObjects] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"day" ascending:YES]]];
+        
+            _Bool updated = NO;
+        
+        
+            for (GoalValue * object in result){
+                //  compare object.day with dayAsNumber
+                //  if a match is found overwrite, this value of object.day
+                NSLog(@"Object - parameter test date: %@\n     day: %@\n     value: %@\n", object.date, object.day, object.value);
+                if (dayAsNumber == object.day){
+                    goalValue.value = @(self.goalValue.value);
+                    goalValue.date = [NSDate date];
+                    updated = YES;
+                }
+            }
+            if (updated == NO){
+                // do something
+                
+                goalValue.day = dayAsNumber;
+                goalValue.value = @(self.goalValue.value);
+                goalValue.date = [NSDate date];
+                
+                // ASSIGN goalValue to detailItem Data Model Entity
+                [self.detailItem addGoalValuesObject:goalValue];
+            }
+        
+
+        
+        
+       //  self.detailItem.goalValues = NSSet (not ordered; cannot have duplicates); convert to array
+        //    to iterate through it
+        
+        
+        [super viewWillDisappear:animated];
+     
+        
+        NSError *saveError = nil;
+        
+        // SAVE MANAGED OBJECT CONTEXT
+        if (![self.detailItem.managedObjectContext save:&saveError]) {
+            NSLog(@"Unable to save managed object context.");
+            NSLog(@"%@, %@", saveError, saveError.localizedDescription);
+        }
+        
+    }// #END sliderChanged == YES
 }
 
 - (void)didReceiveMemoryWarning {
