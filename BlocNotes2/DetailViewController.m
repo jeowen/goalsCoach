@@ -231,7 +231,7 @@
     NSArray *result = [[goalValueHistory allObjects] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"day" ascending:YES]]];
 
     for (GoalValue * object in result){
-        NSLog(@"---array value = %@\n", object);
+       //  NSLog(@"---array value = %@\n", object);
         NSLog(@"Object - parameter test date: %@\n     day: %@\n     value: %@\n", object.date, object.day, object.value);
     }
     
