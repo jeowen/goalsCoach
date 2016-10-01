@@ -15,7 +15,7 @@
 @interface MasterViewController ()
 
 
-@property (weak, nonatomic) NSMutableArray* goalsAvailableToShare;
+// @property (strong, nonatomic) NSMutableArray* goalsAvailableToShare;
 
 @end
 
@@ -24,19 +24,73 @@
 - (IBAction)shareTouchUpInside:(id)sender {
     // do something here to start sharing
     NSLog(@"shareButton pressed");
-    
+
     NSString *textToShare = @"be patient";
     NSURL *myWebsite = [NSURL URLWithString:@"https://sciencedelivered.org/"];
     
     // needs to get list of current goals and create array of goal objects
     
-     NSMutableArray *objectsToShare = [[NSMutableArray alloc] init];
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    NSManagedObject *allGoals = [[NSManagedObject alloc] init];
+//    
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:allGoals];
+//    [fetchRequest setEntity:entity];
+//    NSError *retrieveError = nil;
+//    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:retrieveError ];
+//    NSLog(@"result = %@", result);
+//
     
-     [objectsToShare addObject:textToShare];
-     [objectsToShare addObject:myWebsite];
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Event"];
+    
+    NSError *error = nil;
+    
+    NSArray *results = [context executeFetchRequest:request error:&error];
+    
+    NSLog(@"number of results is %lu", (unsigned long)results.count);
+    
+    NSMutableArray *objectsToShare = [[NSMutableArray alloc] init];
+    
+    
+    //[objectsToShare addObject:textToShare];
+    
+    int i = 1;
+    [objectsToShare addObject:@"My goals are: "];
+    if (results.count>0){
+        NSLog(@"result is %@", results);
+        for (NSObject *resultObject in results){
+            NSString* resultNumber= [NSString stringWithFormat:@"%i", i];
+            NSString *resultGoalName = [[resultObject valueForKey:@"goalName"] description];
+            NSString *combinedString = [NSString stringWithFormat: @"%@. %@", resultNumber, resultGoalName];
+            NSLog(@"**********");
+            NSLog(@"******OBJECT =           ***********");
+            //NSLog(@"object: %@", resultObject);
+            NSLog(@"goalName: %@. %@", resultNumber, resultGoalName);
+            NSLog(@"**********");
+            
+            [objectsToShare addObject:combinedString];
+            i++;
+        }
+        
+    }
+    if (error != nil) {
+        
+        //Deal with failure
+    }
+    else {
+        
+        //Deal with success
+    }
+
+    
+//    
+//    
+    // ****************
+
     // NSMutableArray *objectsToShare = self.goalsAvailableToShare;
     
+   // UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:results applicationActivities:nil];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
     NSArray *excludeActivities = @[UIActivityTypeAirDrop,
                                    UIActivityTypePrint,
@@ -58,6 +112,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
+    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
@@ -164,7 +219,7 @@
 //    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
     cell.textLabel.text = [[object valueForKey:@"goalName"] description];
     NSLog(@"found a goal with name: %@", cell.textLabel.text);
-    [self.goalsAvailableToShare addObject:cell.textLabel.text];
+    // [self.goalsAvailableToShare addObject:cell.textLabel.text];
 }
 
 #pragma mark - Fetched results controller
