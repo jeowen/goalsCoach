@@ -160,7 +160,7 @@
         <!--Intro Sequence Child View Controller-->
         <scene sceneID="gsC-CS-5gy">
             <objects>
-                <viewController id="PhK-XB-dJH" customClass="IntroSequenceChildViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroSequenceChildViewController" id="PhK-XB-dJH" customClass="IntroSequenceChildViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aNw-p6-eqX"/>
                         <viewControllerLayoutGuide type="bottom" id="l4d-MU-dEi"/>
