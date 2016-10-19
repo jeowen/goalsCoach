@@ -22,6 +22,7 @@
 		56422A3D1D924A8900520BC4 /* GoalValue+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 56422A3B1D924A8900520BC4 /* GoalValue+CoreDataProperties.m */; };
 		5652F9521D7537A700EA1B8D /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */; };
 		568318C31D2CBDF00047F2D3 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 568318C21D2CBDF00047F2D3 /* DataSource.m */; };
+		56E1356E1DB72F4600612B9C /* IntroSequenceChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E1356D1DB72F4600612B9C /* IntroSequenceChildViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Event+CoreDataProperties.m"; path = "../Event+CoreDataProperties.m"; sourceTree = "<group>"; };
 		568318C11D2CBDF00047F2D3 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		568318C21D2CBDF00047F2D3 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		56E1356C1DB72F4600612B9C /* IntroSequenceChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroSequenceChildViewController.h; path = ../IntroSequenceChildViewController.h; sourceTree = "<group>"; };
+		56E1356D1DB72F4600612B9C /* IntroSequenceChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroSequenceChildViewController.m; path = ../IntroSequenceChildViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 		563CD8D61D0932910021A77E /* BlocNotes2 */ = {
 			isa = PBXGroup;
 			children = (
+				56E1356C1DB72F4600612B9C /* IntroSequenceChildViewController.h */,
+				56E1356D1DB72F4600612B9C /* IntroSequenceChildViewController.m */,
 				561CEAFA1D90E805001CB486 /* Event+CoreDataClass.h */,
 				561CEAFB1D90E805001CB486 /* Event+CoreDataClass.m */,
 				5652F94E1D7537A700EA1B8D /* Event+CoreDataProperties.h */,
@@ -313,6 +318,7 @@
 				56422A3C1D924A8900520BC4 /* GoalValue+CoreDataClass.m in Sources */,
 				563CD8DF1D0932910021A77E /* BlocNotes2.xcdatamodeld in Sources */,
 				563CD8D91D0932910021A77E /* main.m in Sources */,
+				56E1356E1DB72F4600612B9C /* IntroSequenceChildViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
