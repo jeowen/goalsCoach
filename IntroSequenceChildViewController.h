@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IntroSequenceChildViewController : UIViewController <UIPageViewControllerDataSource>
+@interface IntroSequenceChildViewController : UIViewController 
 
 @property (strong, nonatomic) IBOutlet UILabel *headerLabel;
 @property (strong, nonatomic) IBOutlet UILabel *bodyLabel;
@@ -17,6 +17,5 @@
 
 @property (assign, nonatomic) NSInteger *index;
 
-@property (strong, nonatomic) UIPageViewController *pageController;
 
 @end

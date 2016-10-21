@@ -10,7 +10,7 @@
 #import "DetailViewController.h"
 #import "DataSource.h"
 #import "Event+CoreDataClass.h"
-
+#import "IntroSequenceParentViewController.h"
 
 @interface MasterViewController ()
 
@@ -120,7 +120,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
+    BOOL haveSeenIntro = [[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenIntroSequence"];
+    if (!haveSeenIntro){
+        UIViewController *vc = [[IntroSequenceParentViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
     [super viewWillAppear:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning {
