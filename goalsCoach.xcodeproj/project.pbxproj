@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		561CEB021D90E805001CB486 /* Event+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 561CEAFB1D90E805001CB486 /* Event+CoreDataClass.m */; };
 		5631D3291DB9D8A200FA2697 /* IntroSequenceParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5631D3281DB9D8A200FA2697 /* IntroSequenceParentViewController.m */; };
+		5631D3301DBA73B600FA2697 /* IntroSequenceTargetGrayscale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5631D32F1DBA73B600FA2697 /* IntroSequenceTargetGrayscale.jpg */; };
 		563CD8D91D0932910021A77E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8D81D0932910021A77E /* main.m */; };
 		563CD8DC1D0932910021A77E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8DB1D0932910021A77E /* AppDelegate.m */; };
 		563CD8DF1D0932910021A77E /* BlocNotes2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8DD1D0932910021A77E /* BlocNotes2.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 		561CEAFB1D90E805001CB486 /* Event+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Event+CoreDataClass.m"; path = "../Event+CoreDataClass.m"; sourceTree = "<group>"; };
 		5631D3271DB9D8A200FA2697 /* IntroSequenceParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroSequenceParentViewController.h; sourceTree = "<group>"; };
 		5631D3281DB9D8A200FA2697 /* IntroSequenceParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroSequenceParentViewController.m; sourceTree = "<group>"; };
+		5631D32F1DBA73B600FA2697 /* IntroSequenceTargetGrayscale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IntroSequenceTargetGrayscale.jpg; sourceTree = "<group>"; };
 		563CD8D41D0932910021A77E /* goalsCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goalsCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563CD8D81D0932910021A77E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		563CD8DA1D0932910021A77E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5631D32D1DBA738C00FA2697 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5631D32E1DBA73A800FA2697 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5631D32E1DBA73A800FA2697 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5631D32F1DBA73B600FA2697 /* IntroSequenceTargetGrayscale.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		563CD8CB1D0932910021A77E = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +170,7 @@
 				563CD8EB1D0932910021A77E /* LaunchScreen.storyboard */,
 				563CD8EE1D0932910021A77E /* Info.plist */,
 				563CD8DD1D0932910021A77E /* BlocNotes2.xcdatamodeld */,
+				5631D32D1DBA738C00FA2697 /* Resources */,
 				563CD8D71D0932910021A77E /* Supporting Files */,
 			);
 			path = BlocNotes2;
@@ -286,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5631D3301DBA73B600FA2697 /* IntroSequenceTargetGrayscale.jpg in Resources */,
 				563CD8ED1D0932910021A77E /* LaunchScreen.storyboard in Resources */,
 				563CD8EA1D0932910021A77E /* Assets.xcassets in Resources */,
 				563CD8E81D0932910021A77E /* Main.storyboard in Resources */,
