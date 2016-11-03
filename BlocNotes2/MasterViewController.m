@@ -111,7 +111,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
+    BOOL haveSeenIntro = [[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenIntroSequence"];
+    BOOL doNotShowAgain = [[NSUserDefaults standardUserDefaults] boolForKey:@"doNotShowAgain"];
+    NSLog(@"APP LOADED with NSUserDefaults haveSeenIntro = %d, doNotShowAgain = %d", haveSeenIntro, doNotShowAgain);
+    if (doNotShowAgain == YES){
+        haveSeenIntro = YES;
+    }
+    else{
+        haveSeenIntro = NO;
+    }
+    [[NSUserDefaults standardUserDefaults] setBool:haveSeenIntro forKey:@"hasSeenIntroSequence"];
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;

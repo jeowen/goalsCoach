@@ -79,12 +79,20 @@
 - (void)respondToTapGesture:(UITapGestureRecognizer *)recognizer {
     CGPoint location = [recognizer locationInView:[recognizer.view superview]];
     NSLog(@"view has been tapped on button screen");
+    // alert presentingViewController that it needs to dismiss this view
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenIntroSequence"];
+    [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
 }
 - (IBAction)respondToGetStarted:(id)sender {
     NSLog(@"Get Started button was pressed");
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenIntroSequence"];
+    [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
 }
 - (IBAction)respondToDoNotShowAgain:(id)sender {
     NSLog(@"Do Not Show Again was pressed");
+      [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"doNotShowAgain"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenIntroSequence"];
+     [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
 }
 /*
 #pragma mark - Navigation
