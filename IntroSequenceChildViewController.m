@@ -21,7 +21,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) viewDidAppear:(BOOL)animated{
+- (void) viewDidLoad{
   //  self.headerLabel.text = [NSString stringWithFormat:@"Screen #%d", self.index];
 //    self.doNotShowButton.hidden = YES;
 //    self.getStartedButton.hidden = YES;
@@ -55,6 +55,12 @@
     if (self.index == 4){
         self.doNotShowButton.hidden = NO;
         self.getStartedButton.hidden = NO;
+        self.doNotShowButton.layer.cornerRadius = 15;
+        self.getStartedButton.layer.cornerRadius = 15;
+        self.doNotShowButton.layer.borderColor = [UIColor blackColor].CGColor;
+        self.getStartedButton.layer.borderColor = [UIColor blackColor].CGColor;
+        self.doNotShowButton.layer.borderWidth = 1;
+        self.getStartedButton.layer.borderWidth = 1;
         
         // respond to tap gesture to close the IntroSequence
         // Create and initialize a tap gesture

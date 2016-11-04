@@ -16,7 +16,7 @@
 		563CD8E21D0932910021A77E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8E11D0932910021A77E /* MasterViewController.m */; };
 		563CD8E51D0932910021A77E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8E41D0932910021A77E /* DetailViewController.m */; };
 		563CD8E81D0932910021A77E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563CD8E61D0932910021A77E /* Main.storyboard */; };
-		563CD8EA1D0932910021A77E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563CD8E91D0932910021A77E /* Assets.xcassets */; };
+		563CD8EA1D0932910021A77E /* arrowRotated.png in Resources */ = {isa = PBXBuildFile; fileRef = 563CD8E91D0932910021A77E /* arrowRotated.png */; };
 		563CD8ED1D0932910021A77E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563CD8EB1D0932910021A77E /* LaunchScreen.storyboard */; };
 		563CD8F81D0932920021A77E /* BlocNotes2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD8F71D0932920021A77E /* BlocNotes2Tests.m */; };
 		563CD9031D0932920021A77E /* BlocNotes2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 563CD9021D0932920021A77E /* BlocNotes2UITests.m */; };
@@ -25,6 +25,7 @@
 		5652F9521D7537A700EA1B8D /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5652F94F1D7537A700EA1B8D /* Event+CoreDataProperties.m */; };
 		568318C31D2CBDF00047F2D3 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 568318C21D2CBDF00047F2D3 /* DataSource.m */; };
 		56E1356E1DB72F4600612B9C /* IntroSequenceChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E1356D1DB72F4600612B9C /* IntroSequenceChildViewController.m */; };
+		56E65E001DCC57D300FB877A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E65DFF1DCC57D300FB877A /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +61,7 @@
 		563CD8E31D0932910021A77E /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		563CD8E41D0932910021A77E /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		563CD8E71D0932910021A77E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		563CD8E91D0932910021A77E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		563CD8E91D0932910021A77E /* arrowRotated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrowRotated.png; path = Assets.xcassets/Image.imageset/arrowRotated.png; sourceTree = "<group>"; };
 		563CD8EC1D0932910021A77E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		563CD8EE1D0932910021A77E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		563CD8F31D0932920021A77E /* goalsCoach.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalsCoach.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +80,7 @@
 		568318C21D2CBDF00047F2D3 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		56E1356C1DB72F4600612B9C /* IntroSequenceChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroSequenceChildViewController.h; path = ../IntroSequenceChildViewController.h; sourceTree = "<group>"; };
 		56E1356D1DB72F4600612B9C /* IntroSequenceChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroSequenceChildViewController.m; path = ../IntroSequenceChildViewController.m; sourceTree = "<group>"; };
+		56E65DFF1DCC57D300FB877A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = goalsCoach/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		563CD8CB1D0932910021A77E = {
 			isa = PBXGroup;
 			children = (
+				56E65DFF1DCC57D300FB877A /* Images.xcassets */,
 				563CD8D61D0932910021A77E /* BlocNotes2 */,
 				563CD8F61D0932920021A77E /* BlocNotes2Tests */,
 				563CD9011D0932920021A77E /* BlocNotes2UITests */,
@@ -166,7 +169,7 @@
 				568318C11D2CBDF00047F2D3 /* DataSource.h */,
 				568318C21D2CBDF00047F2D3 /* DataSource.m */,
 				563CD8E61D0932910021A77E /* Main.storyboard */,
-				563CD8E91D0932910021A77E /* Assets.xcassets */,
+				563CD8E91D0932910021A77E /* arrowRotated.png */,
 				563CD8EB1D0932910021A77E /* LaunchScreen.storyboard */,
 				563CD8EE1D0932910021A77E /* Info.plist */,
 				563CD8DD1D0932910021A77E /* BlocNotes2.xcdatamodeld */,
@@ -306,8 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5631D3301DBA73B600FA2697 /* IntroSequenceTargetGrayscale.jpg in Resources */,
+				56E65E001DCC57D300FB877A /* Images.xcassets in Resources */,
 				563CD8ED1D0932910021A77E /* LaunchScreen.storyboard in Resources */,
-				563CD8EA1D0932910021A77E /* Assets.xcassets in Resources */,
+				563CD8EA1D0932910021A77E /* arrowRotated.png in Resources */,
 				563CD8E81D0932910021A77E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,9 +491,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BlocNotes2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.health-space.BlocNotes2";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.health-space.goalsCoach";
 				PRODUCT_NAME = goalsCoach;
 			};
 			name = Debug;
@@ -498,9 +503,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BlocNotes2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.health-space.BlocNotes2";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.health-space.goalsCoach";
 				PRODUCT_NAME = goalsCoach;
 			};
 			name = Release;

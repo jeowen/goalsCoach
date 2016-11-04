@@ -190,29 +190,41 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[self.fetchedResultsController sections] count];
+    return MAX(1, [[self.fetchedResultsController sections] count]);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
 //    return [sectionInfo numberOfObjects];
-    return [self.fetchedResultsController.fetchedObjects count];
+    return MAX (1, [self.fetchedResultsController.fetchedObjects count]);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    if (self.fetchedResultsController.fetchedObjects.count == 0){
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NoDataCell" forIndexPath:indexPath];
+        return cell;
+    }
+    else{
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
         
-    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-   // NSManagedObject *object = [DataSource sharedInstance].goalItems[indexPath.row];
-    [self configureCell:cell withObject:object];
+        
+        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+       // NSManagedObject *object = [DataSource sharedInstance].goalItems[indexPath.row];
+        [self configureCell:cell withObject:object];
 
-    
-    return cell;
+
+        return cell;
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+        if (self.fetchedResultsController.fetchedObjects.count == 0){
+            return NO;
+        }
+        else{
+            return YES;
+        }
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
